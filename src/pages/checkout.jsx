@@ -30,7 +30,7 @@ export default function CheckoutPage() {
     }
 
     const options = {
-      key: "rzp_test_wRak5731kH55Io", // 🛑 Replace with your Razorpay Key ID
+      key: process.env.REACT_APP_RAZORPAY_KEY, // 🛑 Replace with your Razorpay Key ID
       amount: totalPrice * 100, // in paise
       currency: "INR",
       name: "My E-Commerce Site",
