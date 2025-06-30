@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+/* App.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fffaf0; /* Creamy white background */
+  color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1.5rem 2rem;
+  background-color: #fff5e1;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links a {
+  margin: 0 1rem;
+  font-size: 1rem;
+  color: black;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #666;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: black;
   color: white;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Main Section */
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-text {
+  max-width: 500px;
+}
+
+.main-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.main-text p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.shop-button {
+  padding: 0.75rem 1.5rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.shop-button:hover {
+  background-color: #333;
+}
+
+/* Image Cluster */
+.image-cluster {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.image-cluster img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
